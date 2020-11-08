@@ -1,0 +1,126 @@
+@mixin reset-cirule($color) {
+  width: 30px;
+  height: 30px;
+  background-color: $color;
+  color: white;
+  border-radius: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  right: -10px;
+  border: 2px solid white;
+  bottom: 8px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  height: 70px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.topBar {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  background-color: white;
+  justify-content: space-around;
+
+  .search {
+    width: 25px;
+    margin: 0px 10px;
+  }
+
+  input {
+    border: none;
+    width: 90%;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    color: #111111;
+    font-size: 16px;
+    height: 60px;
+    outline: none;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+}
+
+.right_Side {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name_Pash {
+  display: flex;
+  flex-direction: column;
+
+  .naMe {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .pash {
+    font-size: 13px;
+    color: #646464;
+    display: block;
+  }
+}
+
+.user_img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100%;
+  overflow: hidden;
+}
+.notifications {
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+
+  .envelop {
+    position: relative;
+    padding: 0px 10px;
+    img {
+      width: 20px;
+    }
+
+    span {
+      @include reset-cirule(#2ad7c5);
+    }
+  }
+
+  .bell {
+    position: relative;
+    padding: 0px 10px;
+    img {
+      width: 20px;
+    }
+
+    span {
+      @include reset-cirule(#ff3131);
+    }
+  }
+}
+
+.languages {
+  padding: 0px 10px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  .icn {
+    color: #ffab01;
+  }
+  span {
+    padding: 0px 10px;
+    font-weight: 600;
+  }
+}
