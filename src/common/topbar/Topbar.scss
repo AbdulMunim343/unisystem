@@ -1,20 +1,5 @@
-@mixin reset-cirule($color) {
-  width: 30px;
-  height: 30px;
-  background-color: $color;
-  color: white;
-  border-radius: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  right: -10px;
-  border: 2px solid white;
-  bottom: 8px;
-  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
+@import "../../sass/mixin.scss";
+@import "../../sass/variables.scss";
 .main {
   display: flex;
   align-items: center;
@@ -89,12 +74,12 @@
   .envelop {
     position: relative;
     padding: 0px 10px;
-    img {
+    .enve {
       width: 20px;
     }
 
-    span {
-      @include reset-cirule(#2ad7c5);
+    .Number_genrater {
+      @include reset-cirule($sky_blue);
     }
   }
 
@@ -105,8 +90,8 @@
       width: 20px;
     }
 
-    span {
-      @include reset-cirule(#ff3131);
+    .Number_genrater {
+      @include reset-cirule($red);
     }
   }
 }
@@ -117,7 +102,7 @@
   display: flex;
   align-items: center;
   .icn {
-    color: #ffab01;
+    color: $orang;
   }
   span {
     padding: 0px 10px;
@@ -127,4 +112,122 @@
 
 .chevron_bottom {
   cursor: pointer;
+}
+
+//Drop Admin Down menue start//
+.admin_drop_down {
+  min-width: 200px;
+  border: none;
+  top: 70px;
+  right: 213px;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
+  display: none;
+
+  .admin_name {
+    text-align: center;
+    background-color: $orang;
+    padding: 20px 25px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .list {
+    padding: 10px 0px;
+    margin-bottom: 0px;
+
+    li {
+      color: #646464;
+      font-size: 13px;
+      display: block;
+      padding: 8px 25px;
+
+      .list_icn {
+        margin-left: 0;
+        margin-right: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #444444;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid $orang;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    top: -8px;
+    right: 14px;
+  }
+}
+
+.messege_drop_down {
+  min-width: 350px;
+  border: none;
+  top: 48px;
+  right: -3px;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
+
+  .messege_status {
+    text-align: center;
+    background-color: $sky_blue;
+    padding: 20px 25px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+  }
+
+  .contant_area {
+    padding: 20px;
+  }
+
+  .messege_wrapper {
+    display: flex;
+
+    .text_wrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin-left: 15px;
+      .nt_container {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+
+        .item_name {
+          font-size: 14px;
+          font-weight: 600;
+          color: #444444;
+        }
+
+        .item_time {
+          font-size: 14px;
+          color: #848484;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0 0 20px 0;
+        color: #646464;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid $sky_blue;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    top: -8px;
+    right: 14px;
+  }
 }

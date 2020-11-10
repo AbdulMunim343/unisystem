@@ -1,6 +1,8 @@
+@import "../../sass/variables.scss";
+
 .logo {
   height: 70px;
-  background: linear-gradient(#ff9d01, #ffaa01);
+  background: linear-gradient($orang, $orang);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +17,7 @@
 nav {
   ul {
     height: 100vh;
-    background-color: #042954;
+    background-color: $blue;
     margin-bottom: 0px;
 
     li {
