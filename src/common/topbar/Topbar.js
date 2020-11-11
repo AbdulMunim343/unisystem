@@ -124,14 +124,49 @@ const Topbar = () =>{
             <Wrapper/>
 
          </div>
-         {/* Messege drop Down end */}
+         {/* Messege drop Down end */} 
          
       </div>
          
          <div className="bell">
-            <img src={Notification} />
+            <img src={Notification} className="bell_noti" />
             <span className="Number_genrater">8</span>
+         
+         
+         
+          
+         {/* Messege drop Down Start */}
+         
+         <div className="notification_drop_down ">
+            <div className="messege_status">
+               03 Notification 
+            </div>
+
+          
+            <Wrapper/>
+            <Wrapper/>
+            <Wrapper/>
+            <Wrapper/>
+
          </div>
+         {/* Messege drop Down end */} 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+       </div>
       
       </div>
             
