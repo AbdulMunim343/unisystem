@@ -240,6 +240,7 @@
   position: absolute;
   background: white;
   box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
+  display: none;
 
   .messege_status {
     text-align: center;
@@ -249,40 +250,42 @@
     position: relative;
   }
 
-  .contant_area {
-    padding: 10px 20px;
+  .noti_wrapper {
+    padding: 0px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .messege_wrapper {
-    display: flex;
+  .media_noti {
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 20px;
+    padding-bottom: 14px;
+    display: inline-flex;
+    justify-content: center;
+  }
 
-    .text_wrapper {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      margin-left: 15px;
-      .nt_container {
-        display: flex;
-        justify-content: space-between;
-        flex: 1;
+  .item_noti {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    line-height: 31px;
+    text-align: center;
+    background-color: $sky_blue;
+  }
 
-        .item_name {
-          font-size: 14px;
-          font-weight: 600;
-          color: #444444;
-        }
+  .noti_text {
+    margin-left: 15px;
 
-        .item_time {
-          font-size: 14px;
-          color: #848484;
-        }
-      }
-
-      p {
-        font-size: 14px;
-        color: #646464;
-      }
+    span {
+      font: 12px;
     }
+  }
+
+  .post_title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444444;
   }
 
   &::after {
@@ -296,4 +299,26 @@
     top: -8px;
     right: 14px;
   }
+}
+
+.language_drop {
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
+  background-color: white;
+  font-size: 14px;
+
+  font-size: 14px;
+  li {
+    padding: 10px 20px;
+  }
+}
+
+#navigation-dropdown {
+  transition: 3s ease-out;
+}
+.hide {
+  opacity: 0;
+  height: 0 !important;
 }
