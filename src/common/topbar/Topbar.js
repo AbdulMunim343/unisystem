@@ -1,6 +1,5 @@
 import React from 'react';
 import '../topbar/Topbar.scss';
-
 //==Import Icons==//
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import PublicIcon from '@material-ui/icons/Public';
@@ -16,6 +15,8 @@ import Search from '../../assets/img/dashboard/search.svg';
 import Admin from '../../assets/img/dashboard/admin.jpg';
 import Envelop from '../../assets/img/dashboard/envelop.svg';
 import Notification from '../../assets/img/dashboard/notification.svg';
+
+
 
 
 
@@ -68,6 +69,10 @@ const Noti_wrapper = () =>{
 
 
 const Topbar = () =>{
+
+    
+
+
     return(
       <div className="main">
       <div className="topBar">
@@ -167,10 +172,10 @@ const Topbar = () =>{
   
           <div className="languages">
               <PublicIcon className="icn" />
-              <span>EN</span>
+              <span onClick={Myfun}>EN</span>
               <KeyboardArrowDownIcon className="chevron_bottom"/>
           
-            <ul className="language_drop">
+            <ul className="language_drop" itemID="myDropdown">
                <li>English</li>
                <li>Spanish</li>
                <li>Frenchise</li>
@@ -185,3 +190,8 @@ const Topbar = () =>{
 }
 
 export default Topbar;
+
+const Myfun = () =>{
+    document.getElementById("myDropdown").ClassList.toggle("show");
+
+}

@@ -308,8 +308,8 @@
   box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
   background-color: white;
   font-size: 14px;
+  display: none;
 
-  font-size: 14px;
   li {
     padding: 10px 20px;
   }
@@ -321,4 +321,8 @@
 .hide {
   opacity: 0;
   height: 0 !important;
+}
+
+.show {
+  display: block;
 }
