@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import '../navbar/Nav.scss';
 import { NavLink } from "react-router-dom";
 
@@ -22,7 +22,9 @@ const Under = {
 
 
 
-const Nav = () =>{
+class Nav extends Component{
+    render(){
+    
     return(
 <>
     <nav>
@@ -81,8 +83,10 @@ const Nav = () =>{
         </ul>
     </nav>
 
-</>);
+</>)
 
+
+    }
 }
 
 

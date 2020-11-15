@@ -1,20 +1,23 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import React from 'react';
+import React, {Component} from 'react';
 import {Switch,Route} from 'react-router-dom';
 
 // components//
-import Nav from './components/navbar/Nav';
-import Dashboard from './components/dashboard/Dashboard';
-import Students from './components/students/Students';
-import Teachers from './components/teachers/Teachers'
-import  Classes from './components/classes/Classes';
-import Semester from './components/semester/Semester';
-import Account from './components/account/Account' 
+import Nav from './components/navbar/Nav.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
+import Students from './components/students/Students.jsx';
+import Teachers from './components/teachers/Teachers.jsx'
+import  Classes from './components/classes/Classes.jsx';
+import Semester from './components/semester/Semester.jsx';
+import Account from './components/account/Account.jsx' 
 
 
 
-const App = () => {
+class App extends Component {
+  
+  render(){
+  
   return (
     <>
 
@@ -45,7 +48,8 @@ const App = () => {
 
 </div>
     </>
-  );
+  )
+  }
 }
 
 export default App;

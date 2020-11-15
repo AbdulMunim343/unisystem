@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../semester/Semester.scss';
 
 
 
 
 
-const Semester = () =>{
+class Semester extends Component{
+    
+    render(){
     return(
         <>
             <h1>Semester</h1>
         </>
     )
+}
 }
 
 

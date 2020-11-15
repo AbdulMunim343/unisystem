@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../students/Students.scss';
 
-const Students = () =>{
+class Students extends Component {
+    
+    render(){
     return(
 
         <>
@@ -10,5 +12,6 @@ const Students = () =>{
 
 
     )
+    }
 }
 export default Students;

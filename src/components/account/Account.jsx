@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 import  '../account/Account.scss'
 
 
 
 
 
-const Account = () =>{
+class Account extends Component{
+    
+    render(){
+    
     return(
         <>
             <h1>Account</h1>
         </>
     )
+    
+}
+
 }
 
 

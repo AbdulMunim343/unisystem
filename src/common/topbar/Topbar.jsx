@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../topbar/Topbar.scss';
 //==Import Icons==//
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
@@ -68,13 +68,21 @@ const Noti_wrapper = () =>{
 
 
 
-const Topbar = () =>{
-
+class Topbar extends React.Component{
+ 
+    constructor(props) {
+        super(props);
+        this.state = {
+         Isshow : false
+        };
+      }
     
 
+render(){
 
     return(
-      <div className="main">
+
+    <div className="main">
       <div className="topBar">
           <img src={Search} className="search" />
           <input type="text" placeholder="Find Something . . ." />
@@ -171,11 +179,11 @@ const Topbar = () =>{
           </div>
   
           <div className="languages">
-              <PublicIcon className="icn" />
-              <span onClick={Myfun}>EN</span>
+              <PublicIcon className="icn" onClick={() => this.setState({Isshow : true})}/>
+              <span >EN</span>
               <KeyboardArrowDownIcon className="chevron_bottom"/>
           
-            <ul className="language_drop" itemID="myDropdown">
+            <ul className={this.state.Isshow ? "language_drop show" : "language_drop dontShow" }>
                <li>English</li>
                <li>Spanish</li>
                <li>Frenchise</li>
@@ -187,11 +195,8 @@ const Topbar = () =>{
   </div>
   
     )
+    }
 }
 
 export default Topbar;
 
-const Myfun = () =>{
-    document.getElementById("myDropdown").ClassList.toggle("show");
-
-}
