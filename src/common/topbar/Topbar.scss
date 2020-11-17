@@ -64,6 +64,7 @@
 
   border-radius: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 .notifications {
   height: auto;
@@ -74,6 +75,7 @@
   .envelop {
     position: relative;
     padding: 0px 10px;
+    cursor: pointer;
     .enve {
       width: 20px;
     }
@@ -86,6 +88,7 @@
   .bell {
     position: relative;
     padding: 0px 10px;
+    cursor: pointer;
     .bell_noti {
       width: 20px;
     }
@@ -123,7 +126,6 @@
   position: absolute;
   background: white;
   box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
-  display: none;
 
   .admin_name {
     text-align: center;
@@ -173,7 +175,6 @@
   position: absolute;
   background: white;
   box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
-  display: none;
 
   .messege_status {
     text-align: center;
@@ -240,7 +241,6 @@
   position: absolute;
   background: white;
   box-shadow: 0px 0px 10px 0px rgba(33, 30, 30, 0.15);
-  display: none;
 
   .messege_status {
     text-align: center;
@@ -323,9 +323,15 @@
 }
 
 .show {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  transform: translateY(0px);
 }
 
 .dontShow {
-  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(20px);
 }

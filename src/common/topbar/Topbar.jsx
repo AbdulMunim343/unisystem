@@ -73,7 +73,10 @@ class Topbar extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-         Isshow : false
+         Isshow :false,
+         NoTi:false,
+         MessEge:false,
+         AdMin:false 
         };
       }
     
@@ -91,7 +94,7 @@ render(){
           <div className="name_Pash">
               <p className="naMe">
                   Abdul Munim
-                  <KeyboardArrowDownIcon className="chevron_bottom" />
+                  <KeyboardArrowDownIcon className="chevron_bottom" onClick={() => this.setState({AdMin: !this.state.AdMin})}/>
               </p>
               <p className="pash">
                   Admin
@@ -99,7 +102,7 @@ render(){
   
               {/* Admin Drop Down start*/}
   
-              <div className="admin_drop_down">
+              <div className={this.state.AdMin ? "admin_drop_down show" : "admin_drop_down dontShow" }>
                   <div className="admin_name">
                       Abdul Munim
                   </div>
@@ -134,17 +137,17 @@ render(){
   
               {/* Admin Drop Down End */}
           </div>
-          <div className="user_img">
+          <div className="user_img" onClick={() => this.setState({AdMin: !this.state.AdMin})}>
               <img src={Admin} />
           </div>
           <div className="notifications">
               <div className="envelop">
-                  <img src={Envelop} className="enve" />
+                  <img src={Envelop} className="enve" onClick={() => this.setState({MessEge: !this.state.MessEge})}/>
                   <span className="Number_genrater">8</span>
   
                   {/* Messege drop Down Start */}
   
-                  <div className="messege_drop_down">
+                  <div className={this.state.MessEge ? "messege_drop_down show" : "messege_drop_down dontShow" }>
                       <div className="messege_status">
                           05 Messege
                       </div>
@@ -158,12 +161,12 @@ render(){
               </div>
   
               <div className="bell">
-                  <img src={Notification} className="bell_noti" />
+                  <img src={Notification} className="bell_noti" onClick={() => this.setState({NoTi: !this.state.NoTi})} />
                   <span className="Number_genrater">8</span>
   
                   {/* Messege drop Down Start */}
   
-                  <div className="notification_drop_down ">
+                  <div className={this.state.NoTi ? "notification_drop_down show" : "notification_drop_down dontShow" }>
                       <div className="messege_status">
                           03 Notification
                       </div>
@@ -179,9 +182,9 @@ render(){
           </div>
   
           <div className="languages">
-              <PublicIcon className="icn" onClick={() => this.setState({Isshow : true})}/>
+              <PublicIcon className="icn"/>
               <span >EN</span>
-              <KeyboardArrowDownIcon className="chevron_bottom"/>
+              <KeyboardArrowDownIcon className="chevron_bottom" onClick={() => this.setState({Isshow : !this.state.Isshow})}/>
           
             <ul className={this.state.Isshow ? "language_drop show" : "language_drop dontShow" }>
                <li>English</li>
