@@ -1,10 +1,17 @@
-
-
 @font-face {
   font-family: "popin";
   font-weight: 300;
   font-style: normal;
   src: url("../src/assets/font/popin.woff2");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0px;
 }
 
 body {
@@ -21,5 +28,21 @@ body {
 
   .Compo {
     width: 100%;
+  }
+}
+
+.main_Container {
+  padding: 0px 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .main_Heading {
+    padding: 20px 0px;
+    h3 {
+      font-weight: 600;
+      text-transform: capitalize;
+      color: #111111;
+    }
   }
 }
