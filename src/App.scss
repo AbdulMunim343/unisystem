@@ -46,3 +46,20 @@ body {
     }
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color:#ffa001; 
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #042954; 
+  border-radius: 10px;
+}

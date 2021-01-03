@@ -46,8 +46,106 @@
 }
 
 .dounut_date {
-  padding: 10px;
+  padding: 20px;
   background-color: $white;
   box-shadow: 0px 10px 20px 15px rgba(229, 229, 229, 0.75);
   width: calc(100% / 2.07);
+  .card_holder_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      color: #111111;
+      font-weight: 600;
+      margin-bottom: 0;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      color: #bcbcbc;
+      font-size: 36px;
+      cursor: pointer;
+      padding-bottom: 15px;
+    }
+  }
+
+  .dounut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.chart {
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.bar_Aria {
+  display: flex;
+  justify-content: space-between;
+}
+
+.student_count {
+  h4 {
+    font-size: 14px;
+    color: #a5a5a5;
+    margin-bottom: 2px;
+  }
+
+  span {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 500;
+  }
+
+  .color_gardians {
+    height: 6px;
+    width: 49px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+
+  .right_color {
+    background-color: $orang;
+  }
+
+  .left_color {
+    background-color: $blue;
+  }
+}
+
+.react-calendar{
+  width: 100% !important;
+  border: none !important;
+  font-family: "Popin" !important;
+  
+  .react-calendar__month-view__weekdays__weekday{
+    
+    abbr{
+      text-decoration: none !important;
+     
+    }
+  }
+
+  .react-calendar__tile--active{
+   font-family: "Popin" !important;
+   background-color: $blue;
+  }
+  .react-calendar__navigation__label{
+    font-family: "Popin" !important;
+    font-weight: bold !important;
+  }
+
+  .react-calendar__tile {
+    abbr{
+      font-family: "Popin" !important;
+    }
+  }
+
+  .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus{
+    background-color: $orang !important;
+  }
+
 }

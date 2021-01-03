@@ -327,6 +327,7 @@
   opacity: 1;
   transition: 0.5s;
   transform: translateY(0px);
+  z-index: 100;
 }
 
 .dontShow {
