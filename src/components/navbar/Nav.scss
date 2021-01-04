@@ -49,3 +49,35 @@ nav {
     background-color: #061f3c;
   }
 }
+
+.progress_bar{
+  display: flex;
+  border-radius: 50px;
+ margin-top: 10px;
+  overflow: hidden;
+  .dir{
+    padding: 5px;
+    background-color:$direct;
+    width: 40%;
+  }
+
+  .srch{
+    padding: 5px;
+    background-color:$search;
+    width: 20%;
+  }
+
+  .ref{
+    padding: 5px;
+    background-color:$reff;
+    width: 20%;
+  }
+
+  .soc{
+    padding: 5px;
+    background-color:$social;
+    width: 20%;
+  }
+
+
+}

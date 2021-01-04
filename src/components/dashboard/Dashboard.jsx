@@ -60,6 +60,7 @@ class Dashboard extends React.Component {
                         })}
                     </div>
                     <div className="card_Holder">
+                        {/* dounur chart start*/}
                         <div className="dounut_date">
                             <div className="card_holder_heading">
                                 <h3>Students</h3>
@@ -86,6 +87,8 @@ class Dashboard extends React.Component {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Caledar start*/}
                         <div className="dounut_date">
                             <div className="card_holder_heading">
                                 <h3>Event Calender</h3>
@@ -97,8 +100,24 @@ class Dashboard extends React.Component {
                     </div>
 
                     <div className="card_Holder">
+                        {/* Treffics start*/}
                         <div className="dounut_date">
+                            <div className="card_holder_heading">
+                                <h3>Website Traffic</h3>
+                                <MoreVertIcon />
+                            </div>
+                            <div className="treffic_container">
+                                <span>Unique Treffic</span>
+                                <h1>2,510</h1>
+                                <div className="progress_bar">
+                                    <div className="dir"></div>
+                                    <div className="srch"></div>
+                                    <div className="ref"></div>
+                                    <div className="soc"></div>
+                                </div>
+                            </div>
                         </div>
+                        {/* Notification start*/}
                         <div className="dounut_date">
                         </div>
                     </div>
