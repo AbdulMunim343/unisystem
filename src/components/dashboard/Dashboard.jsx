@@ -9,6 +9,9 @@ import 'react-calendar/dist/Calendar.css';
 
 
 
+
+
+
 //==import Componets==//
 import Topbar from '../../common/topbar/Topbar.jsx';
 //==import iconss==//
@@ -24,6 +27,20 @@ const Card_top = (props) => {
             <div className="text_holder">
                 <div className="item_title">{props.Card_title}</div>
                 <div className="item_number">{props.Card_number}</div>
+            </div>
+        </div>
+    )
+}
+
+const Card_bottom = (props) => {
+    return (
+        <div className="top_card">
+            <div className="icons_item">
+                <img src={props.Icon} />
+            </div>
+            <div className="text_holder">
+                <div className="item_title">{props.Icon_title}</div>
+                <div className="item_number">{props.Member}</div>
             </div>
         </div>
     )
@@ -115,13 +132,119 @@ class Dashboard extends React.Component {
                                     <div className="ref"></div>
                                     <div className="soc"></div>
                                 </div>
+
+                                {/* color anticater start */}
+                                <div className="color_mach">
+                                    <span>
+                                        <div className="color_circul"></div>
+                                        Direct
+                                    </span>
+                                    <span>12,890</span>
+                                    <span>50%</span>
+                                </div>
+
+                                {/* color anticater start */}
+                                <div className="color_mach">
+                                    <span>
+                                        <div className="color_circul cb"></div>
+                                       Search
+                                    </span>
+                                    <span>7,245</span>
+                                    <span>27%</span>
+                                </div>
+
+                                {/* color anticater start */}
+                                <div className="color_mach">
+                                    <span>
+                                        <div className="color_circul co"></div>
+                                        Referrals
+                                    </span>
+                                    <span>4,256</span>
+                                    <span>8%</span>
+                                </div>
+
+                                {/* color anticater start */}
+                                <div className="color_mach">
+                                    <span>
+                                        <div className="color_circul cr"></div>
+                                        Social
+                                    </span>
+                                    <span>500</span>
+                                    <span>7%</span>
+                                </div>
+
+
+
                             </div>
                         </div>
                         {/* Notification start*/}
                         <div className="dounut_date">
+                            <div className="card_holder_heading">
+                                <h3>Notice Board</h3>
+                                <MoreVertIcon />
+                            </div>
+                            <div className="notic_containr">
+                                <div className="notice">
+                                    <div className="post_date">16 June, 2019</div>
+                                    <p>Great School manag mene esom text of theprinting.</p>
+
+                                    <div class="entry-meta">
+                                        Jennyfar Lopez /
+                                        <span>5 min ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div className="notice">
+                                    <div className="post_date cb">16 June, 2019</div>
+                                    <p>Great School manag mene esom text of theprinting.</p>
+
+                                    <div class="entry-meta">
+                                        Jennyfar Lopez /
+                                        <span>5 min ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div className="notice">
+                                    <div className="post_date co">16 June, 2019</div>
+                                    <p>Great School manag mene esom text of theprinting.</p>
+
+                                    <div class="entry-meta">
+                                        Jennyfar Lopez /
+                                        <span>5 min ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div className="notice">
+                                    <div className="post_date cr">16 June, 2019</div>
+                                    <p>Great School manag mene esom text of theprinting.</p>
+
+                                    <div class="entry-meta">
+                                        Jennyfar Lopez /
+                                        <span>5 min ago</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
 
+                    <div className="card_Holder">
+                        {Card_data.map((Cardval) => {
+                            return (
+                                <Card_bottom
+                                    Icon={Cardval.Icon}
+                                    Icon_title={Cardval.Icon_title}
+                                    Member={Cardval.Member}
+                                />
+                            )
+                        })}
+                    </div>
+                    <span>&copy; Copy Right By Abdul Munim 2021</span>
                 </div>
             </>
         )
